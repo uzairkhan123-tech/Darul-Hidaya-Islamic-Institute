@@ -1,0 +1,428 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darul Hidayah Islamic Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Glowing animation for course cards and form button */
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.8), 0 0 30px rgba(34, 197, 94, 0.5); }
+            100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.3); }
+        }
+
+        .course-glow {
+            animation: glow 1.5s ease-in-out infinite;
+        }
+
+        .form-button-glow {
+            animation: glow 1.5s ease-in-out infinite;
+        }
+
+        /* Fade and slide-in animation for homepage title and form labels */
+        @keyframes fadeSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-title {
+            animation: fadeSlideIn 1.5s ease-out forwards;
+        }
+
+        .form-label-animate {
+            animation: fadeSlideIn 0.8s ease-out forwards;
+        }
+
+        /* Fade and scale-in animation for form inputs */
+        @keyframes fadeScaleIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .form-input-animate {
+            animation: fadeScaleIn 0.8s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        /* Apply animations when form container is animated */
+        .form-animate .form-label {
+            animation: fadeSlideIn 0.8s ease-out forwards;
+        }
+
+        .form-animate .form-input {
+            animation: fadeScaleIn 0.8s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        .form-animate .form-button {
+            animation: glow 1.5s ease-in-out infinite;
+        }
+
+        /* Moving stars animation for About Us section */
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none; /* Prevent stars from interfering with clicks */
+        }
+
+        @keyframes moveStars {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+        }
+
+        .stars-animate .star {
+            animation: moveStars 2s ease-in-out infinite;
+        }
+
+        .star:nth-child(1) { width: 2px; height: 2px; top: 10%; left: 10%; animation-delay: 0s; }
+        .star:nth-child(2) { width: 3px; height: 3px; top: 20%; left: 30%; animation-delay: 0.5s; }
+        .star:nth-child(3) { width: 2px; height: 2px; top: 30%; left: 50%; animation-delay: 1s; }
+        .star:nth-child(4) { width: 4px; height: 4px; top: 40%; left: 70%; animation-delay: 1.5s; }
+        .star:nth-child(5) { width: 3px; height: 3px; top: 50%; left: 20%; animation-delay: 0.3s; }
+        .star:nth-child(6) { width: 2px; height: 2px; top: 60%; left: 40%; animation-delay: 0.8s; }
+        .star:nth-child(7) { width: 3px; height: 3px; top: 70%; left: 60%; animation-delay: 1.2s; }
+        .star:nth-child(8) { width: 2px; height: 2px; top: 80%; left: 80%; animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-green-600 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Darul Hidayah Islamic Institute</h1>
+            <div class="space-x-4">
+                <a href="#home" class="hover:underline">Home</a>
+                <a href="#about" class="hover:underline">About Us</a>
+                <a href="#admission" class="hover:underline">Admission</a>
+                <a href="#courses" class="hover:underline">Courses</a>
+                <a href="#contact" class="hover:underline">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-cover bg-center text-white relative" style="background-image: url('https://iqraonline.com/wp-content/uploads/2023/06/Significance-of-Quran.png');">
+        <div class="container mx-auto text-center bg-black bg-opacity-50 p-8 rounded-lg relative z-10">
+            <h2 class="text-4xl font-bold mb-4 animate-title">Welcome to Darul Hidayah Islamic Institute</h2>
+            <p class="text-lg mb-6">Empowering minds with Islamic knowledge and values.</p>
+            <a href="#admission" class="bg-white text-green-600 px-6 py-2 rounded-full hover:bg-gray-200">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Maaz Khan is a certified Islamic scholar, having successfully completed Eight Years Of Dars-e-Nizami From Jamia Sirajia, Rawalpindi—a well-known and respected Islamic institution. With a deep understanding of classical Islamic sciences, Maaz Khan is grounded in the teachings of the Qur’an, Hadith, Fiqh.<br><br>
+                He brings with him over Six Years of dedicated experience in teaching the Holy Qur’an to students of all ages. His teaching style is known for its clarity, patience, and ability to connect with learners, helping them not only recite but also understand the meaning and spirit of the Qur’an.
+            </p>
+        </div>
+        <!-- Moving stars -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </section>
+
+    <!-- Admission Section -->
+    <section id="admission" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Admission Form</h2>
+            <div id="admission-form-container" class="max-w-lg mx-auto">
+                <form id="admission-form" class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2 form-label" for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" class="w-full p-2 border rounded form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2 form-label" for="fatherName">Father Name</label>
+                        <input type="text" id="fatherName" name="fatherName" class="w-full p-2 border rounded form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2 form-label" for="cnic">CNIC (without dashes)</label>
+                        <input type="text" id="cnic" name="cnic" class="w-full p-2 border rounded form-input" pattern="[0-9]{13}" placeholder="1234567890123" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2 form-label" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full p-2 border rounded form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2 form-label" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-2 border rounded form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2 form-label" for="dob">Date of Birth</label>
+                        <div class="flex space-x-2">
+                            <select id="dob-day" name="dob-day" class="w-1/3 p-2 border rounded form-input" required>
+                                <option value="">Day</option>
+                                <script>
+                                    for (let i = 1; i <= 31; i++) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                    }
+                                </script>
+                            </select>
+                            <select id="dob-month" name="dob-month" class="w-1/3 p-2 border rounded form-input" required>
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select id="dob-year" name="dob-year" class="w-1/3 p-2 border rounded form-input" required>
+                                <option value="">Year</option>
+                                <script>
+                                    for (let i = 2025; i >= 1980; i--) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2 form-label" for="qualification">Qualification</label>
+                        <select id="qualification" name="qualification" class="w-full p-2 border rounded form-input" required>
+                            <option value="">Select Qualification</option>
+                            <option value="matriculation">Matriculation</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="oalevel">O/A Level</option>
+                            <option value="graduation">Graduation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 form-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Courses</h2>
+            <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md course-card">
+                    <h3 class="text-xl font-bold mb-2">Reading The Quran With Tajweed</h3>
+                    <p class="text-gray-700">Master the art of Quranic recitation with proper Tajweed rules under expert guidance.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md course-card">
+                    <h3 class="text-xl font-bold mb-2">Basic Qaida For Kids</h3>
+                    <p class="text-gray-700">A foundational course designed for children to learn Arabic letters and basic Quranic reading.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md course-card">
+                    <h3 class="text-xl font-bold mb-2">6 Kalimahs</h3>
+                    <p class="text-gray-700">Learn and memorize the six fundamental Islamic declarations of faith.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md course-card">
+                    <h3 class="text-xl font-bold mb-2">Namaz & Ahadess</h3>
+                    <p class="text-gray-700">Understand the principles of Salah and explore authentic Ahadith teachings.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md course-card">
+                    <h3 class="text-xl font-bold mb-2">How To Perform Ablution (Wazu)</h3>
+                    <p class="text-gray-700">Learn the proper method and significance of performing Wazu, a key ritual purification in Islam.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md course-card">
+                    <h3 class="text-xl font-bold mb-2">Ethics (Ikhlakiyat)</h3>
+                    <p class="text-gray-700">Explore Islamic ethics and moral values to cultivate a virtuous and compassionate character.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
+                <p class="mb-4">For any inquiries, please reach out to us through the following channels:</p>
+                <p class="mb-2"><strong>Phone:</strong> <a href="tel:+923495007935" class="text-green-600 hover:underline">+92 349 5007935</a></p>
+                <p class="mb-2"><strong>WhatsApp:</strong> <a href="https://wa.me/+923495007935" class="text-green-600 hover:underline">+92 349 5007935</a></p>
+                <p class="mb-2"><strong>Email:</strong> <a href="mailto:M034945007935@gmail.com" class="text-green-600 hover:underline">M034945007935@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="tel:+923495007935" class="hover:underline">Call Me: +92 349 5007935</a>
+                <a href="https://wa.me/+923495007935" class="hover:underline">WhatsApp: +92 349 5007935</a>
+                <a href="mailto:M034945007935@gmail.com" class="hover:underline">Email: M034945007935@gmail.com</a>
+            </div>
+            <p>&copy; 2025 Darul Hidayah Islamic Institute. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling with mailto
+        document.getElementById('admission-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = {
+                fullName: formData.get('fullName'),
+                fatherName: formData.get('fatherName'),
+                cnic: formData.get('cnic'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                dob: `${formData.get('dob-day')}/${formData.get('dob-month')}/${formData.get('dob-year')}`,
+                qualification: formData.get('qualification')
+            };
+
+            const emailBody = `
+                New Admission Form Submission:
+                Full Name: ${data.fullName}
+                Father Name: ${data.fatherName}
+                CNIC: ${data.cnic}
+                Phone Number: ${data.phone}
+                Email: ${data.email}
+                Date of Birth: ${data.dob}
+                Qualification: ${data.qualification}
+            `.trim();
+
+            const mailtoLink = `mailto:M034945007935@gmail.com?subject=New%20Admission%20Form%20Submission&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
+
+            alert('Form submitted successfully! Your email client will open.');
+            this.reset();
+        });
+
+        // Scroll-triggered glow for courses section
+        const coursesSection = document.getElementById('courses');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        const courseObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    courseCards.forEach(card => card.classList.add('course-glow'));
+                } else {
+                    courseCards.forEach(card => card.classList.remove('course-glow'));
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of the section is visible
+        });
+
+        courseObserver.observe(coursesSection);
+
+        // Scroll-triggered animations for admission form
+        const admissionFormContainer = document.getElementById('admission-form-container');
+
+        const formObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    admissionFormContainer.classList.add('form-animate');
+                } else {
+                    admissionFormContainer.classList.remove('form-animate');
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of the form is visible
+        });
+
+        formObserver.observe(admissionFormContainer);
+
+        // Scroll-triggered stars animation for about section
+        const aboutSection = document.getElementById('about');
+
+        const aboutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aboutSection.classList.add('stars-animate');
+                } else {
+                    aboutSection.classList.remove('stars-animate');
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of the section is visible
+        });
+
+        aboutObserver.observe(aboutSection);
+    </script>
+</body>
+</html>
