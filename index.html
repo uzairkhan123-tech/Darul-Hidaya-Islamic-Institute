@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Islamic Institute | Learn the Holy Quran with Tajweed</title>
-<meta name="description" content="Zikr Quran Academy offers online Quran classes taught by Maulana Muhammad Umar Farooq, an Islamic Scholar and Expert Quran Teacher with 10 years of experience. Tajweed, Hifz, Nazira, Tafseer and Islamic Studies for children and adults worldwide.">
+<meta name="description" content="Islamic Institute Quran Academy offers online Quran classes taught by Maulana Muhammad Umar Farooq, an Islamic Scholar and Expert Quran Teacher with 10 years of experience. Tajweed, Hifz, Nazira, Tafseer and Islamic Studies for children and adults worldwide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
@@ -33,30 +33,32 @@
     background:var(--cream);
     line-height:1.7;
     overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
   }
   h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.2;color:var(--green-800)}
   .arabic{font-family:'Amiri',serif;direction:rtl}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   .wrap{width:min(1180px,92%);margin-inline:auto}
-  .section{padding:clamp(60px,8vw,110px) 0}
+  .section{padding:clamp(40px,6vw,110px) 0}
   .eyebrow{
     display:inline-flex;align-items:center;gap:.55rem;
     font-family:'Source Serif Pro',serif;font-weight:700;
-    text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;
+    text-transform:uppercase;letter-spacing:.22em;font-size:.7rem;
     color:var(--gold-700);
   }
   .eyebrow::before,.eyebrow.center::after{content:"";width:26px;height:1px;background:var(--gold-500)}
   .eyebrow.center::after{display:block;margin:.4rem auto 0}
-  .section-title{font-size:clamp(2rem,4vw,3rem);margin:.5rem 0 1rem}
-  .section-sub{max-width:640px;color:var(--ink-soft);font-size:1.05rem}
+  .section-title{font-size:clamp(1.7rem,4vw,3rem);margin:.5rem 0 1rem}
+  .section-sub{max-width:640px;color:var(--ink-soft);font-size:.98rem}
   .center{text-align:center}
   .center .section-sub{margin-inline:auto}
   .btn{
     display:inline-flex;align-items:center;gap:.55rem;
-    font-family:'Source Serif Pro',serif;font-weight:600;font-size:1rem;
-    padding:.9rem 1.7rem;border-radius:2px;cursor:pointer;
+    font-family:'Source Serif Pro',serif;font-weight:600;font-size:.92rem;
+    padding:.8rem 1.5rem;border-radius:2px;cursor:pointer;
     border:1px solid transparent;transition:.25s ease;letter-spacing:.02em;
+    text-align:center;justify-content:center;
   }
   .btn-gold{background:linear-gradient(135deg,var(--gold-500),var(--gold-600));color:var(--green-900);border-color:var(--gold-600);box-shadow:0 12px 28px -12px rgba(201,162,39,.7)}
   .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(201,162,39,.85)}
@@ -78,122 +80,128 @@
     background:rgba(7,48,31,.92);backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
   .brand{display:flex;align-items:center;gap:.7rem}
   .brand .crest{
-    width:42px;height:42px;border-radius:50%;
+    width:38px;height:38px;border-radius:50%;
     display:grid;place-items:center;
     background:radial-gradient(circle at 30% 30%,var(--gold-300),var(--gold-600));
-    color:var(--green-900);font-family:'Cormorant Garamond';font-weight:700;font-size:1.3rem;
-    box-shadow:0 0 0 2px rgba(212,175,55,.4) inset;
+    color:var(--green-900);font-family:'Cormorant Garamond';font-weight:700;font-size:1.2rem;
+    box-shadow:0 0 0 2px rgba(212,175,55,.4) inset;flex-shrink:0;
   }
-  .brand-text{font-family:'Cormorant Garamond';font-size:1.25rem;font-weight:600;color:#fff;line-height:1}
-  .brand-text small{display:block;font-family:'Source Serif Pro';font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-300);font-weight:600;margin-top:3px}
-  .nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none}
-  .nav-links a{color:rgba(255,255,255,.82);font-size:.95rem;font-weight:600;position:relative;transition:.2s}
+  .brand-text{font-family:'Cormorant Garamond';font-size:1.1rem;font-weight:600;color:#fff;line-height:1}
+  .brand-text small{display:block;font-family:'Source Serif Pro';font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-300);font-weight:600;margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:1.4rem;list-style:none}
+  .nav-links a{color:rgba(255,255,255,.82);font-size:.88rem;font-weight:600;position:relative;transition:.2s}
   .nav-links a:hover{color:var(--gold-300)}
   .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--gold-500);transition:.25s}
   .nav-links a:hover::after{width:100%}
-  .nav-cta{display:flex;align-items:center;gap:1rem}
-  .burger{display:none;background:none;border:1px solid var(--line);border-radius:4px;cursor:pointer;padding:.45rem .55rem;flex-direction:column;gap:5px}
-  .burger span{width:22px;height:2px;background:var(--gold-300);display:block}
-  @media(max-width:860px){
+  .nav-cta{display:flex;align-items:center;gap:.8rem}
+  .nav-cta .btn{font-size:.82rem;padding:.6rem 1rem}
+  .burger{display:none;background:none;border:1px solid var(--line);border-radius:4px;cursor:pointer;padding:.4rem .5rem;flex-direction:column;gap:5px}
+  .burger span{width:20px;height:2px;background:var(--gold-300);display:block;transition:.2s}
+
+  /* Mobile navigation */
+  @media(max-width:900px){
     .nav-links{
-      position:fixed;inset:0 0 0 auto;width:min(320px,80%);
+      position:fixed;inset:0 0 0 auto;width:min(300px,85%);
       background:var(--green-900);flex-direction:column;justify-content:center;
       transform:translateX(100%);transition:.35s ease;padding:3rem 2rem;gap:1.4rem;
-      border-left:1px solid var(--line);
+      border-left:1px solid var(--line);z-index:60;
     }
     .nav-links.open{transform:translateX(0)}
+    .nav-links a{font-size:1rem}
     .burger{display:flex}
+    .nav-cta .btn.js-open-trial{display:none}
   }
 
   /* ---------- Hero ---------- */
   .hero{position:relative;color:#fff;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,48,31,.35) 0%,rgba(7,48,31,.65) 60%,var(--green-900) 100%);pointer-events:none}
-  .hero .wrap{position:relative;z-index:2;padding:clamp(70px,11vw,140px) 0 clamp(60px,8vw,100px)}
-  .hero .bismillah{font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--gold-300);margin-bottom:1.4rem;text-shadow:0 2px 18px rgba(0,0,0,.4)}
-  .hero h1{font-size:clamp(2.6rem,6.5vw,4.8rem);color:#fff;font-weight:700;letter-spacing:-.01em}
+  .hero .wrap{position:relative;z-index:2;padding:clamp(50px,10vw,140px) 0 clamp(45px,7vw,100px)}
+  .hero .bismillah{font-size:clamp(1.4rem,3.5vw,2.4rem);color:var(--gold-300);margin-bottom:1.2rem;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+  .hero h1{font-size:clamp(2.1rem,6vw,4.8rem);color:#fff;font-weight:700;letter-spacing:-.01em}
   .hero h1 .accent{color:var(--gold-500);font-style:italic}
-  .hero .tagline{font-family:'Cormorant Garamond';font-size:clamp(1.15rem,2.4vw,1.7rem);color:var(--gold-300);font-style:italic;margin-top:.8rem;font-weight:500}
-  .hero .lead{max-width:640px;margin-top:1.3rem;color:rgba(255,255,255,.88);font-size:1.08rem}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
-  .trust{display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid rgba(212,175,55,.25)}
-  .trust div{display:flex;align-items:center;gap:.6rem;font-size:.92rem;color:rgba(255,255,255,.85)}
-  .trust .ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(212,175,55,.14);color:var(--gold-300);border:1px solid rgba(212,175,55,.4)}
+  .hero .tagline{font-family:'Cormorant Garamond';font-size:clamp(1.05rem,2.4vw,1.7rem);color:var(--gold-300);font-style:italic;margin-top:.7rem;font-weight:500}
+  .hero .lead{max-width:640px;margin-top:1.1rem;color:rgba(255,255,255,.88);font-size:1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+  .trust{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:2rem;padding-top:1.4rem;border-top:1px solid rgba(212,175,55,.25)}
+  .trust div{display:flex;align-items:center;gap:.5rem;font-size:.84rem;color:rgba(255,255,255,.85)}
+  .trust .ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(212,175,55,.14);color:var(--gold-300);border:1px solid rgba(212,175,55,.4);font-size:.8rem;flex-shrink:0}
   .hero-mosque{position:absolute;right:-6%;bottom:-2%;width:min(420px,38vw);opacity:.18;z-index:1;pointer-events:none}
 
   /* ---------- Generic cards ---------- */
-  .grid{display:grid;gap:1.4rem}
+  .grid{display:grid;gap:1.2rem}
   .card{
     background:#fff;border:1px solid var(--line);border-radius:6px;
-    padding:2rem 1.8rem;transition:.3s;position:relative;overflow:hidden;
+    padding:1.6rem 1.4rem;transition:.3s;position:relative;overflow:hidden;
   }
   .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold-500)}
   .card .ic-box{
-    width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+    width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
     background:linear-gradient(135deg,var(--cream-200),#fff);
-    border:1px solid var(--line);color:var(--green-700);margin-bottom:1rem;
-    font-size:1.5rem;
+    border:1px solid var(--line);color:var(--green-700);margin-bottom:.9rem;
+    font-size:1.3rem;
   }
-  .card h3{font-size:1.4rem;margin-bottom:.5rem}
-  .card p{color:var(--ink-soft);font-size:.96rem}
-  .card .tag{display:inline-block;margin-top:1rem;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-700);background:var(--cream-200);padding:.3rem .7rem;border-radius:2px}
-  .card .card-foot{margin-top:1.2rem}
+  .card h3{font-size:1.25rem;margin-bottom:.4rem}
+  .card p{color:var(--ink-soft);font-size:.92rem}
+  .card .tag{display:inline-block;margin-top:.9rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-700);background:var(--cream-200);padding:.25rem .6rem;border-radius:2px}
+  .card .card-foot{margin-top:1rem}
   .btn-enroll{
     display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;
-    font-family:'Source Serif Pro',serif;font-weight:700;font-size:.88rem;
-    padding:.55rem 1.1rem;border-radius:2px;border:1px solid var(--gold-600);
+    font-family:'Source Serif Pro',serif;font-weight:700;font-size:.82rem;
+    padding:.5rem 1rem;border-radius:2px;border:1px solid var(--gold-600);
     background:linear-gradient(135deg,var(--gold-500),var(--gold-600));color:var(--green-900);
     transition:.22s ease;letter-spacing:.02em;
   }
   .btn-enroll:hover{transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(201,162,39,.75)}
   .contact-line a{color:rgba(255,255,255,.75);transition:.2s}
   .contact-line a:hover{color:var(--gold-300)}
-  .wa-btn{display:inline-flex;align-items:center;gap:.5rem;margin-top:.4rem;font-family:'Source Serif Pro',serif;font-weight:700;font-size:.85rem;color:#fff;background:#25D366;border:1px solid #1eb858;padding:.5rem 1rem;border-radius:4px;transition:.22s;text-decoration:none}
+  .wa-btn{display:inline-flex;align-items:center;gap:.5rem;margin-top:.4rem;font-family:'Source Serif Pro',serif;font-weight:700;font-size:.82rem;color:#fff;background:#25D366;border:1px solid #1eb858;padding:.5rem 1rem;border-radius:4px;transition:.22s;text-decoration:none}
   .wa-btn:hover{background:#20b85a;transform:translateY(-2px)}
 
   /* ---------- About ---------- */
   #about{background:var(--cream)}
-  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
   @media(max-width:860px){.about-grid{grid-template-columns:1fr}}
   .tutor-photo{
     position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;
     background:linear-gradient(160deg,var(--green-700),var(--green-900));
     display:grid;place-items:center;color:var(--gold-300);
     box-shadow:var(--shadow);border:1px solid var(--gold-600);
+    min-height:280px;
   }
   .tutor-photo::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><g fill='none' stroke='%23e8cf7a' stroke-width='1' opacity='0.4'><rect x='20' y='20' width='40' height='40'/><rect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/></g></svg>");background-size:80px 80px;opacity:.5}
-  .tutor-photo .monogram{position:relative;font-family:'Amiri',serif;font-size:5rem;color:var(--gold-300);text-align:center;line-height:1}
-  .tutor-photo .monogram small{display:block;font-family:'Cormorant Garamond';font-size:1rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1rem;color:rgba(255,255,255,.8)}
+  .tutor-photo .monogram{position:relative;font-family:'Amiri',serif;font-size:3.5rem;color:var(--gold-300);text-align:center;line-height:1}
+  .tutor-photo .monogram small{display:block;font-family:'Cormorant Garamond';font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;margin-top:.8rem;color:rgba(255,255,255,.8)}
   .tutor-badge{
-    position:absolute;left:-18px;bottom:28px;background:#fff;color:var(--green-800);
-    padding:.9rem 1.2rem;border-radius:4px;box-shadow:var(--shadow);border:1px solid var(--line);
-    display:flex;align-items:center;gap:.8rem;
+    position:absolute;left:-10px;bottom:20px;background:#fff;color:var(--green-800);
+    padding:.7rem 1rem;border-radius:4px;box-shadow:var(--shadow);border:1px solid var(--line);
+    display:flex;align-items:center;gap:.6rem;max-width:calc(100% + 10px);
   }
-  .tutor-badge .big{font-family:'Cormorant Garamond';font-size:2rem;font-weight:700;color:var(--gold-700);line-height:1}
-  .tutor-badge small{display:block;font-size:.78rem;color:var(--ink-soft);max-width:120px}
-  .about-body h2{font-size:clamp(1.9rem,3.6vw,2.7rem)}
-  .about-body .name{font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--green-800);font-weight:600;margin:.4rem 0 .2rem}
-  .about-body .role{color:var(--gold-700);font-weight:700;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase}
-  .about-body p{margin-top:1rem;color:var(--ink-soft)}
-  .quals{list-style:none;margin-top:1.3rem;display:grid;gap:.7rem}
-  .quals li{display:flex;gap:.7rem;align-items:flex-start;font-size:.98rem;color:var(--ink)}
-  .quals li .dot{flex:none;margin-top:.45rem;width:10px;height:10px;background:var(--gold-500);transform:rotate(45deg)}
-  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--line)}
+  .tutor-badge .big{font-family:'Cormorant Garamond';font-size:1.6rem;font-weight:700;color:var(--gold-700);line-height:1}
+  .tutor-badge small{display:block;font-size:.7rem;color:var(--ink-soft);max-width:110px;line-height:1.3}
+  .about-body h2{font-size:clamp(1.6rem,3.6vw,2.7rem)}
+  .about-body .name{font-family:'Cormorant Garamond';font-size:1.3rem;color:var(--green-800);font-weight:600;margin:.4rem 0 .2rem}
+  .about-body .role{color:var(--gold-700);font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+  .about-body p{margin-top:.9rem;color:var(--ink-soft);font-size:.95rem}
+  .quals{list-style:none;margin-top:1.1rem;display:grid;gap:.6rem}
+  .quals li{display:flex;gap:.6rem;align-items:flex-start;font-size:.9rem;color:var(--ink)}
+  .quals li .dot{flex:none;margin-top:.4rem;width:8px;height:8px;background:var(--gold-500);transform:rotate(45deg)}
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--line)}
   @media(max-width:560px){.stats-row{grid-template-columns:repeat(2,1fr)}}
-  .stat .num{font-family:'Cormorant Garamond';font-size:2.2rem;font-weight:700;color:var(--gold-700);line-height:1}
-  .stat .lbl{font-size:.82rem;color:var(--ink-soft);margin-top:.3rem}
+  .stat .num{font-family:'Cormorant Garamond';font-size:1.8rem;font-weight:700;color:var(--gold-700);line-height:1}
+  .stat .lbl{font-size:.75rem;color:var(--ink-soft);margin-top:.3rem}
 
   /* ---------- Courses ---------- */
   #courses{background:var(--cream-200)}
-  .courses-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:2.6rem}
+  .courses-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:2rem}
 
   /* ---------- Why choose us ---------- */
   #why{background:var(--cream)}
-  .why-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:2.4rem}
-  .why-grid .card{padding:1.7rem 1.5rem}
-  .why-grid .card .ic-box{width:46px;height:46px;font-size:1.25rem}
+  .why-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2rem}
+  .why-grid .card{padding:1.4rem 1.2rem}
+  .why-grid .card .ic-box{width:42px;height:42px;font-size:1.15rem}
 
   /* ---------- Fees ---------- */
   #fees{
@@ -205,95 +213,95 @@
   #fees .section-sub{color:rgba(255,255,255,.8)}
   #fees .eyebrow{color:var(--gold-300)}
   .fee-headline{
-    text-align:center;margin:2rem auto 0;max-width:680px;
+    text-align:center;margin:1.6rem auto 0;max-width:680px;
     background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.35);
-    border-radius:6px;padding:2rem;
+    border-radius:6px;padding:1.6rem 1.2rem;
   }
-  .fee-headline .lbl{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-300);font-weight:700}
-  .fee-headline .amt{font-family:'Cormorant Garamond';font-size:clamp(3rem,7vw,4.5rem);font-weight:700;color:#fff;line-height:1;margin:.4rem 0}
+  .fee-headline .lbl{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-300);font-weight:700}
+  .fee-headline .amt{font-family:'Cormorant Garamond';font-size:clamp(2.6rem,6vw,4.5rem);font-weight:700;color:#fff;line-height:1;margin:.4rem 0}
   .fee-headline .amt span{color:var(--gold-500)}
-  .fee-headline .per{color:rgba(255,255,255,.75)}
-  .fee-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2.4rem}
+  .fee-headline .per{color:rgba(255,255,255,.75);font-size:.9rem}
+  .fee-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-top:1.8rem}
   .fee-card{
     background:rgba(255,255,255,.05);border:1px solid rgba(212,175,55,.3);
-    border-radius:6px;padding:1.5rem 1.2rem;text-align:center;transition:.3s;
+    border-radius:6px;padding:1.2rem .9rem;text-align:center;transition:.3s;
     backdrop-filter:blur(2px);
   }
   .fee-card:hover{background:rgba(212,175,55,.1);border-color:var(--gold-500);transform:translateY(-4px)}
-  .fee-card .flag{font-size:2rem;line-height:1}
-  .fee-card .country{font-size:.84rem;color:rgba(255,255,255,.7);margin-top:.5rem}
-  .fee-card .code{font-size:.72rem;letter-spacing:.16em;color:var(--gold-300);font-weight:700;text-transform:uppercase}
-  .fee-card .amount{font-family:'Cormorant Garamond';font-size:1.85rem;font-weight:700;color:#fff;margin-top:.7rem;line-height:1}
-  .fee-card .pp{font-size:.74rem;color:rgba(255,255,255,.55);margin-top:.4rem}
+  .fee-card .flag{font-size:1.7rem;line-height:1}
+  .fee-card .country{font-size:.78rem;color:rgba(255,255,255,.7);margin-top:.4rem}
+  .fee-card .code{font-size:.68rem;letter-spacing:.14em;color:var(--gold-300);font-weight:700;text-transform:uppercase}
+  .fee-card .amount{font-family:'Cormorant Garamond';font-size:1.5rem;font-weight:700;color:#fff;margin-top:.5rem;line-height:1}
+  .fee-card .pp{font-size:.7rem;color:rgba(255,255,255,.55);margin-top:.4rem}
   .fee-note{
-    text-align:center;margin-top:2rem;font-size:.86rem;color:rgba(255,255,255,.6);
-    border-top:1px solid rgba(212,175,55,.2);padding-top:1.4rem;max-width:720px;margin-inline:auto;
+    text-align:center;margin-top:1.6rem;font-size:.8rem;color:rgba(255,255,255,.6);
+    border-top:1px solid rgba(212,175,55,.2);padding-top:1.2rem;max-width:720px;margin-inline:auto;
   }
 
   /* ---------- Trial banner ---------- */
   .trial-banner{
     background:linear-gradient(135deg,var(--gold-600),var(--gold-700));
-    color:var(--green-900);padding:clamp(50px,7vw,90px) 0;
+    color:var(--green-900);padding:clamp(36px,6vw,90px) 0;
     position:relative;overflow:hidden;
   }
   .trial-banner::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><g fill='none' stroke='%2307301f' stroke-width='1' opacity='0.18'><circle cx='30' cy='30' r='14'/><circle cx='0' cy='0' r='14'/><circle cx='60' cy='0' r='14'/><circle cx='0' cy='60' r='14'/><circle cx='60' cy='60' r='14'/></g></svg>");background-size:60px 60px}
-  .trial-banner .wrap{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem}
-  .trial-banner h2{color:var(--green-900);font-size:clamp(1.8rem,4vw,2.6rem)}
-  .trial-banner p{color:rgba(7,48,31,.8);margin-top:.4rem;max-width:560px}
+  .trial-banner .wrap{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem}
+  .trial-banner h2{color:var(--green-900);font-size:clamp(1.5rem,4vw,2.6rem)}
+  .trial-banner p{color:rgba(7,48,31,.8);margin-top:.4rem;max-width:560px;font-size:.92rem}
 
   /* ---------- Form ---------- */
   #enroll{background:var(--cream-200)}
   .form-card{
     background:#fff;border:1px solid var(--line);border-radius:8px;
-    padding:clamp(1.6rem,3vw,2.6rem);box-shadow:var(--shadow);max-width:880px;margin-inline:auto;
+    padding:clamp(1.2rem,3vw,2.6rem);box-shadow:var(--shadow);max-width:880px;margin-inline:auto;
   }
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
   @media(max-width:640px){.form-row{grid-template-columns:1fr}}
-  .field{margin-bottom:1rem}
-  .field label{display:block;font-size:.85rem;font-weight:700;color:var(--green-800);margin-bottom:.4rem;letter-spacing:.02em}
+  .field{margin-bottom:.9rem}
+  .field label{display:block;font-size:.8rem;font-weight:700;color:var(--green-800);margin-bottom:.35rem;letter-spacing:.02em}
   .field label .req{color:var(--gold-700)}
   .field input,.field select,.field textarea{
-    width:100%;font-family:'Source Serif Pro',serif;font-size:.98rem;color:var(--ink);
-    background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:.75rem .85rem;transition:.2s;
+    width:100%;font-family:'Source Serif Pro',serif;font-size:.92rem;color:var(--ink);
+    background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:.65rem .75rem;transition:.2s;
   }
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold-600);background:#fff;box-shadow:0 0 0 3px rgba(212,175,55,.18)}
-  .field textarea{min-height:90px;resize:vertical}
-  .radio-group{display:flex;gap:1.2rem;flex-wrap:wrap}
-  .radio-pill{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;font-size:.92rem;color:var(--ink)}
+  .field textarea{min-height:80px;resize:vertical}
+  .radio-group{display:flex;gap:.9rem;flex-wrap:wrap}
+  .radio-pill{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;font-size:.86rem;color:var(--ink)}
   .radio-pill input{width:auto}
-  .form-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1rem}
-  .form-note{font-size:.82rem;color:var(--ink-soft)}
+  .form-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-top:.8rem}
+  .form-note{font-size:.78rem;color:var(--ink-soft)}
   .success-msg{
-    display:none;text-align:center;padding:3rem 1.5rem;
+    display:none;text-align:center;padding:2rem 1.2rem;
   }
   .success-msg.show{display:block;animation:fadeIn .4s ease}
   @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
   .success-msg .check{
-    width:78px;height:78px;border-radius:50%;margin:0 auto 1.2rem;
+    width:64px;height:64px;border-radius:50%;margin:0 auto 1rem;
     background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
-    color:var(--green-900);display:grid;place-items:center;font-size:2.4rem;font-weight:700;
+    color:var(--green-900);display:grid;place-items:center;font-size:2rem;font-weight:700;
     box-shadow:0 12px 30px -10px rgba(201,162,39,.6);
   }
-  .success-msg h3{font-size:2rem;color:var(--green-800)}
-  .success-msg p{color:var(--ink-soft);margin-top:.6rem;max-width:480px;margin-inline:auto}
-  .success-msg .arabic{color:var(--gold-700);font-size:1.5rem;margin-top:1rem}
+  .success-msg h3{font-size:1.7rem;color:var(--green-800)}
+  .success-msg p{color:var(--ink-soft);margin-top:.6rem;max-width:480px;margin-inline:auto;font-size:.9rem}
+  .success-msg .arabic{color:var(--gold-700);font-size:1.3rem;margin-top:1rem}
 
   /* ---------- Footer ---------- */
-  footer.site{background:var(--green-900);color:rgba(255,255,255,.8);padding:clamp(50px,7vw,80px) 0 0}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2rem}
+  footer.site{background:var(--green-900);color:rgba(255,255,255,.8);padding:clamp(36px,6vw,80px) 0 0}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:1.6rem}
   @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
   footer .brand-text{color:#fff}
-  footer h4{color:var(--gold-300);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem;font-family:'Source Serif Pro';font-weight:700}
-  footer .foot-about{margin-top:1rem;font-size:.92rem;color:rgba(255,255,255,.65)}
-  footer ul{list-style:none;display:grid;gap:.55rem}
-  footer ul a{color:rgba(255,255,255,.75);font-size:.92rem;transition:.2s}
+  footer h4{color:var(--gold-300);font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.8rem;font-family:'Source Serif Pro';font-weight:700}
+  footer .foot-about{margin-top:.8rem;font-size:.86rem;color:rgba(255,255,255,.65)}
+  footer ul{list-style:none;display:grid;gap:.45rem}
+  footer ul a{color:rgba(255,255,255,.75);font-size:.86rem;transition:.2s}
   footer ul a:hover{color:var(--gold-300);padding-left:4px}
-  .contact-line{display:flex;gap:.6rem;align-items:flex-start;font-size:.92rem;margin-bottom:.7rem;color:rgba(255,255,255,.75)}
+  .contact-line{display:flex;gap:.5rem;align-items:flex-start;font-size:.84rem;margin-bottom:.6rem;color:rgba(255,255,255,.75)}
   .contact-line .ic{color:var(--gold-300);flex:none;margin-top:2px}
-  .foot-verse{text-align:center;font-family:'Amiri';font-size:1.15rem;color:var(--gold-300);margin-top:2.5rem;padding:1.4rem;border-top:1px solid rgba(212,175,55,.2)}
-  .foot-verse small{display:block;font-family:'Source Serif Pro';font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.4rem;font-style:italic}
-  .copy{text-align:center;padding:1.2rem 0;margin-top:1.4rem;border-top:1px solid rgba(212,175,55,.18);font-size:.84rem;color:rgba(255,255,255,.5)}
+  .foot-verse{text-align:center;font-family:'Amiri';font-size:1rem;color:var(--gold-300);margin-top:2rem;padding:1.2rem;border-top:1px solid rgba(212,175,55,.2)}
+  .foot-verse small{display:block;font-family:'Source Serif Pro';font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.4rem;font-style:italic}
+  .copy{text-align:center;padding:1rem 0;margin-top:1.2rem;border-top:1px solid rgba(212,175,55,.18);font-size:.76rem;color:rgba(255,255,255,.5)}
 
   /* ---------- reveal animation ---------- */
   .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
@@ -316,24 +324,24 @@
   @keyframes popIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
   .modal-head{
     background:linear-gradient(135deg,var(--green-800),var(--green-900));
-    color:#fff;padding:1.6rem 1.6rem 1.4rem;position:relative;
+    color:#fff;padding:1.4rem 1.4rem 1.2rem;position:relative;
     border-bottom:2px solid var(--gold-500);
   }
-  .modal-head .bismillah{font-family:'Amiri';font-size:1.2rem;color:var(--gold-300);margin-bottom:.3rem}
-  .modal-head h3{color:#fff;font-size:1.6rem;margin-top:.2rem}
-  .modal-head p{color:rgba(255,255,255,.82);font-size:.92rem;margin-top:.3rem}
+  .modal-head .bismillah{font-family:'Amiri';font-size:1.1rem;color:var(--gold-300);margin-bottom:.3rem}
+  .modal-head h3{color:#fff;font-size:1.4rem;margin-top:.2rem;padding-right:1.5rem}
+  .modal-head p{color:rgba(255,255,255,.82);font-size:.86rem;margin-top:.3rem}
   .modal-close{
-    position:absolute;top:.9rem;right:.9rem;background:rgba(255,255,255,.12);
+    position:absolute;top:.8rem;right:.8rem;background:rgba(255,255,255,.12);
     border:1px solid rgba(212,175,55,.5);color:var(--gold-300);
-    width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;
+    width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;
     display:grid;place-items:center;transition:.2s;line-height:1;
   }
   .modal-close:hover{background:rgba(212,175,55,.25);color:#fff;transform:rotate(90deg)}
-  .modal-body{padding:1.5rem 1.6rem 1.8rem}
-  .modal-body .field{margin-bottom:.9rem}
-  .modal-body .field label{font-size:.82rem}
-  .modal-body .form-actions{margin-top:1.1rem}
-  .modal-body .form-note{display:block;margin-top:.6rem;font-size:.8rem;color:var(--ink-soft)}
+  .modal-body{padding:1.3rem 1.4rem 1.6rem}
+  .modal-body .field{margin-bottom:.8rem}
+  .modal-body .field label{font-size:.78rem}
+  .modal-body .form-actions{margin-top:.9rem}
+  .modal-body .form-note{display:block;margin-top:.6rem;font-size:.76rem;color:var(--ink-soft)}
 </style>
 </head>
 <body>
@@ -510,7 +518,7 @@
 <section class="section" id="why">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow center">Why Zikr Quran Academy</span>
+      <span class="eyebrow center">Why Islamic Institute Quran Academy</span>
       <h2 class="section-title">A Trusted Place to Learn the Quran</h2>
       <p class="section-sub">
         We combine the traditional method of Quran teaching with the convenience of modern online learning,
@@ -606,7 +614,7 @@
       <div class="form-row">
         <div class="field">
           <label>Phone / WhatsApp <span class="req">*</span></label>
-          <input type="tel" name="phone" required placeholder="+1 555 000 0000">
+          <input type="tel" name="phone" required placeholder="+92 321 6659017">
         </div>
         <div class="field">
           <label>Country <span class="req">*</span></label>
@@ -672,9 +680,9 @@
       <div class="check">✓</div>
       <h3>Jazak Allah Khair!</h3>
       <p>Your enrollment request has been prepared. WhatsApp should now be open with your details
-        pre-filled — please press <strong>Send</strong> to deliver it to Zikr Quran Academy. If it did not
+        pre-filled — please press <strong>Send</strong> to deliver it to Islamic Institute Quran Academy. If it did not
         open, tap the button below. We will reply within 24 hours to confirm your free trial class timings.</p>
-      <div style="margin-top:1.4rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+      <div style="margin-top:1.2rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
         <a id="waManualLink" href="#" target="_blank" rel="noopener" class="btn btn-dark">🟢 Open WhatsApp Again</a>
         <button type="button" id="resetForm" class="btn btn-ghost" style="border-color:var(--gold-600);color:var(--green-800);background:transparent">Submit Another</button>
       </div>
@@ -691,7 +699,7 @@
       <div>
         <div class="brand">
           <span class="crest">Z</span>
-          <span class="brand-text">Zikr Quran Academy<small>Learn · Recite · Reflect</small></span>
+          <span class="brand-text">Islamic Institute<small>Learn · Recite · Reflect</small></span>
         </div>
         <p class="foot-about">
           An online Quran academy led by Maulana Muhammad Umar Farooq, Islamic Scholar and Expert Quran
@@ -721,10 +729,10 @@
       <div>
         <h4>Contact</h4>
         <div class="contact-line"><span class="ic">✉</span> <a href="mailto:info@zikrquranacademy.com">info@zikrquranacademy.com</a></div>
-        <div class="contact-line"><span class="ic">☎</span> <a href="tel:+15550102030">+1 (555) 010-2030</a></div>
-        <div class="contact-line"><span class="ic">🟢</span> <a href="https://wa.me/15550102030" target="_blank" rel="noopener">WhatsApp: +1 (555) 010-2030</a></div>
+        <div class="contact-line"><span class="ic">☎</span> <a href="tel:+923216659017">+92 321 6659017</a></div>
+        <div class="contact-line"><span class="ic">🟢</span> <a href="https://wa.me/923216659017" target="_blank" rel="noopener">WhatsApp: +92 321 6659017</a></div>
         <div class="contact-line"><span class="ic">🕐</span> Sat – Thu · 7:00 AM – 11:00 PM (UTC)</div>
-        <a href="https://wa.me/15550102030?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20enquire%20about%20Quran%20classes." target="_blank" rel="noopener" class="wa-btn">🟢 Chat on WhatsApp</a>
+        <a href="https://wa.me/923216659017?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20enquire%20about%20Quran%20classes." target="_blank" rel="noopener" class="wa-btn">🟢 Chat on WhatsApp</a>
       </div>
     </div>
     <div class="foot-verse arabic">
@@ -732,7 +740,7 @@
       <small>"And We have certainly made the Quran easy for remembrance, so is there any who will remember?" — Surah Al-Qamar 54:17</small>
     </div>
     <div class="copy">
-      © <span id="year"></span> Zikr Quran Academy · Maulana Muhammad Umar Farooq. All rights reserved.
+      © <span id="year"></span> TD Group Of Companies / Islamic Institute Quran Academy.
     </div>
   </div>
 </footer>
@@ -754,7 +762,7 @@
         </div>
         <div class="field">
           <label>WhatsApp Number <span class="req">*</span></label>
-          <input type="tel" name="phone" required placeholder="+1 555 000 0000">
+          <input type="tel" name="phone" required placeholder="+92 321 6659017">
         </div>
         <div class="field">
           <label>Course Interested In <span class="req">*</span></label>
@@ -779,9 +787,9 @@
       </form>
 
       <!-- trial success -->
-      <div class="success-msg" id="trialSuccess" style="padding:1.5rem 1rem">
+      <div class="success-msg" id="trialSuccess" style="padding:1.2rem .8rem">
         <div class="check">✓</div>
-        <h3 style="font-size:1.6rem">Jazak Allah Khair!</h3>
+        <h3 style="font-size:1.4rem">Jazak Allah Khair!</h3>
         <p>WhatsApp should now be open with your trial request pre-filled — press <strong>Send</strong> to deliver it. If it didn't open, tap the button below.</p>
         <div style="margin-top:1rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
           <a id="trialWaLink" href="#" target="_blank" rel="noopener" class="btn btn-dark">🟢 Open WhatsApp Again</a>
@@ -809,7 +817,7 @@
   const trialSuccess = document.getElementById('trialSuccess');
   const trialWaLink = document.getElementById('trialWaLink');
   const trialReset = document.getElementById('trialReset');
-  const WHATSAPP_NUMBER = '15550102030';
+  const WHATSAPP_NUMBER = '923216659017'; // +92 321 6659017
 
   function openTrialModal(course){
     if(course){
@@ -842,7 +850,7 @@
   // trial form submit -> WhatsApp
   function buildTrialWhatsAppURL(data){
     const lines = [
-      'Assalamu Alaikum, Zikr Quran Academy',
+      'Assalamu Alaikum, Islamic Institute Quran Academy',
       '',
       '*Free Trial Request*',
       '',
@@ -866,7 +874,7 @@
   });
 
   // ---- Course "Enroll" buttons: scroll to form + pre-select that course ----
-  const courseSelect = document.querySelector('select[name="course"]');
+  const courseSelect = document.querySelector('#enrollForm select[name="course"]');
   const enrollButtons = document.querySelectorAll('.btn-enroll');
   enrollButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -890,7 +898,7 @@
 
   function buildWhatsAppURL(data){
     const lines = [
-      'Assalamu Alaikum, Zikr Quran Academy',
+      'Assalamu Alaikum, Islamic Quran Academy',
       '',
       '*New Enrollment Request*',
       '',
